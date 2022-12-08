@@ -234,13 +234,22 @@ function checkCollision(){
         }
         // --- BOT MOVEMENT
         if (distance < 800){
-            //let angleA = Math.atan2(enemyArr[i].pos.y - player.pos.y, enemyArr[i].pos.x - player.pos.x); //Degrees from enemy
+            let angleA = Math.atan2(enemyArr[i].pos.y - player.pos.y, enemyArr[i].pos.x - player.pos.x); //Degrees from enemy
             //let angleA = Math.atan2(player.pos.y - enemyArr[i].pos.y, player.pos.x - enemyArr[i].pos.x); //Degrees from enemy
             
             let angleInDegrees = angleA * (180 / Math.PI);
             let bearing = (Math.abs(angleInDegrees + 90) % 360);
-
-            console.log(bearing);
+            setTimeout(console.log("+90"),3000);
+            setTimeout(console.log(bearing),3000);
+            bearing = (Math.abs(angleInDegrees + 180) % 360);
+            setTimeout(console.log("+180"),3000);
+            setTimeout(console.log(bearing),3000);
+            bearing = (Math.abs(angleInDegrees + 270) % 360);
+            setTimeout(console.log("+270"),3000);
+            setTimeout(console.log(bearing),3000);
+            bearing = (Math.abs(angleInDegrees + 360) % 360);
+            setTimeout(console.log("+360"),3000);
+            setTimeout(console.log(bearing),3000);
         }
     }
 }
